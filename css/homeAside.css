@@ -1,0 +1,194 @@
+/* ----grid---- */
+
+#contentBox.active {
+display: grid;
+width: 100%;
+height: 1000px;
+grid-template-columns: 20% auto ;
+grid-template-rows: auto auto;
+grid-template-areas: "aside main"
+                    "footer footer";
+
+position: absolute;
+z-index: -1;
+
+}
+
+#contentBox {
+    display: grid;
+    width: 100%;
+    height: 1000px;
+    grid-template-columns:3% auto ;
+    grid-template-rows: auto auto;
+    grid-template-areas: "aside main"
+                         "footer footer";
+    font-size: 16px;
+    position: absolute;
+    z-index: -1;
+    transition: all 300ms linear;
+ 
+    
+    }
+    
+/* contentBox  */
+#contentBox #leftTab{
+    grid-area: aside;
+    background-color: var(--color3);
+    margin: 90px 0px 0px 0px;
+    
+
+}
+
+#contentBox #content {
+    grid-area: main;
+    background-color: var(--color2);
+}
+
+
+/* ----Aticles section----- */ 
+/* Tabtop */
+
+#contentBox.active #leftTab .leftTabTop {
+   display: block;
+    margin: 0.5 em;
+    border-radius: 0.2em;
+    height: 2em;
+    width: 95%;
+    background-color: var(--color4);
+    transform: rotate(0deg);
+    position: static;
+
+}
+#contentBox.active #leftTab .leftTabTop .tabText {
+    font-size: 1.5rem;
+    font-family: var(--fuente1);
+    list-style: none;
+    font-weight: bold;
+    color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contentBox.active .tabButton {
+   z-index: 2;
+   position: fixed;
+   bottom: 5%;
+   left: 17%;
+    padding: 1em;
+   border-radius: 2em;
+    width: 1em;
+    display: block;
+    background-color: var(--color4);
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    font-family: var(--icons);
+    list-style: none;
+    color: var(--color2);    
+    transform: rotate(0deg);
+}
+#contentBox.active .tabButton:hover {
+    color: var(--color1);
+}
+/*unactive card */
+#contentBox #leftTab .leftTabTop {
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+
+}
+#contentBox #leftTab .leftTabTop .tabText {
+    display: none;
+}
+
+#contentBox  .tabButton {
+    z-index: 2;
+   position: fixed;
+   bottom: 5%;
+   left: 1%;
+    padding: 1em;
+   border-radius: 2em;
+    width: 1em;
+    display: block;
+    background-color: var(--color4);
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    font-family: var(--icons);
+    list-style: none;
+    color: var(--color2); 
+    transform: rotate(180deg);
+    transition: transform 300ms linear; 
+}
+   
+
+#contentBox .tabButton:hover {
+    color: var(--color1);
+}
+
+
+/* buttons when is unactive */
+
+/* card */
+
+#contentBox.active #leftTab .card {
+    background-color: var(--color2);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+} 
+
+#contentBox.active #leftTab .card img {
+    width: 100%;
+    margin: 0.5em;
+    border-radius: 0.5em;
+    
+}
+
+#contentBox.active #leftTab .card h3 {
+    font-family: var(--fuente1);
+    font-size: 1.25em;
+    margin: 0.2rem;
+    font-weight: bold;
+    color: var(--color4);
+    text-align: center;
+    line-height: 1em;
+}
+
+#contentBox.active #leftTab .card h4 {
+    font-family: var(--fuente1);
+    font-size: 1em;
+    margin: 0.2em;
+    font-weight: bold;
+    color: var(--color1);
+    text-align: center;
+    line-height: 1em;
+}
+
+
+#contentBox.active #leftTab .card p {
+    font-family: var(--fuente1);
+    font-size: 1em;
+    margin: 0.5em 0em;
+    text-align: justify;
+    hyphens: auto;
+    word-wrap: break-word;
+    line-height: 1.25em;
+}
+
+/*cards unactive */
+#contentBox .card {
+    display: none;
+    transition: all 300ms linear; 
+
+} 
+
+/*----------main section--------------------*/
+#content{
+    font-size: 16px;
+    width: 100%;
+}

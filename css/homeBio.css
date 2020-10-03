@@ -1,0 +1,110 @@
+/* content dimensions*/
+#content .bio {
+    background-color: var(--color1);
+    height: 32em;
+    font-size: 16px;
+        }
+/* content grid*/
+#content .bio {
+    display: grid;
+     grid-template-rows: "1fr 1fr";
+     grid-template-areas: "L R" ;
+                }
+/* grid asing asing */
+
+.bio .bioL {
+    grid-area: L;
+}
+
+.bio .bioR {
+    grid-area: R;
+}
+
+/*margin ajust */
+
+.bioL {
+  
+    margin: 1em 1em 1em 4em;
+}
+.bioR {
+    
+    margin: 1em 4em 1em 1em;
+}
+
+/* Left zone bioL */
+
+.bioL {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-flow: column;
+}
+
+.bioL img.PP{
+    height: 16em;
+    border-radius: 50%;
+    padding: 0.5em;
+    border-color: var(--color2);
+    border-style: solid;
+    border-width: 0.25em;
+}
+
+.bioL img.LP{
+    height: 4em;
+    margin: 2em 0em;
+}
+    
+/* right zone bioR  */
+
+.bioR {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-flow: column;
+    text-align: end;
+    color: var(--color2);
+    
+    
+}
+
+.bioR h2 {
+    margin: 0rem 1rem 1rem 1rem;
+    font-family: var(--fuente2);
+    font-size: 3em;
+    color: var(--color4);
+    font-weight: bold;
+}
+
+.bioR h3 {
+    margin: 0.2rem 1rem;
+    font-family: var(--fuente1);
+    font-size: 1.5em;
+    color: var(--color2);
+    font-weight: bold;
+}
+
+.bioR p {
+    width: 70%;
+    margin: 0.2rem 1rem ;
+    font-family: var(--fuente1);
+    font-size: 1.2em;
+    color: var(--color2);
+    
+}
+
+.bioR h4 {
+    margin: 0.2rem 1rem;
+    font-family: var(--fuente1);
+    font-size: 1.5em;
+    color: var(--color3);
+    font-weight: bold;
+}
+
+.bioR h5 {
+    margin: 0.2rem 1rem 0rem 0rem;
+    font-family: var(--fuente2);
+    font-size: 2em;
+    color: var(--color2);
+    font-weight: bold;
+    text-decoration: underline;
+}
